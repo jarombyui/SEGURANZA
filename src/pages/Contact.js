@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
