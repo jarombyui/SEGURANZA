@@ -37,7 +37,7 @@ const Hero = () => {
           SOMOS EL CENTRO ESPECIALIZADO EN SEGURIDAD INTEGRAL
         </p>
         <p className="text-lg md:text-xl mb-8">
-          CERTIFÍCATE CON LOS EXPERTOS DE ISSECUREX / CONTAMOS CON AÑOS DE EXPERIENCIA EN EL MERCADO
+          CERTIFÍCATE CON LOS EXPERTOS DE SEGURANZA / CONTAMOS CON AÑOS DE EXPERIENCIA EN EL MERCADO
         </p>
         <div className="flex flex-col md:flex-row gap-4">
           <Link 
