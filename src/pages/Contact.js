@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -37,14 +38,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary via-indigo-900 to-purple-900">
+    <div className="min-h-screen bg-primary">
       <div className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
               Contáctanos
             </h1>
-            <div className="w-24 h-1 bg-white/50 mx-auto mb-6 rounded-full"></div>
+            <div className="w-24 h-1 bg-accent mx-auto mb-6 rounded-full"></div>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Estamos aquí para ayudarte. Envíanos tus consultas y te responderemos a la brevedad.
             </p>
@@ -52,12 +53,12 @@ const Contact = () => {
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <div className="bg-secondary rounded-2xl p-8 shadow-xl border border-accent/20">
               <h2 className="text-3xl font-bold text-white mb-8">Información de Contacto</h2>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="text-yellow-400 text-2xl">📍</div>
+                  <div className="text-accent text-2xl">📍</div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Dirección</h3>
                     <p className="text-white/90">Urb. Virgen del Carmen, Calle Gardenias N° 13, Ate - Lima.</p>
@@ -65,7 +66,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="text-yellow-400 text-2xl">📞</div>
+                  <div className="text-accent text-2xl">📞</div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Teléfono</h3>
                     <p className="text-white/90">+51 947 726 382</p>
@@ -73,7 +74,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="text-yellow-400 text-2xl">✉️</div>
+                  <div className="text-accent text-2xl">✉️</div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
                     <p className="text-white/90">ingeniumalliance@gmail.com</p>
@@ -81,7 +82,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="text-yellow-400 text-2xl">⏰</div>
+                  <div className="text-accent text-2xl">⏰</div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Horario de Atención</h3>
                     <p className="text-white/90">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
@@ -91,17 +92,17 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <div className="bg-secondary rounded-2xl p-8 shadow-xl border border-accent/20">
               <h2 className="text-3xl font-bold text-white mb-8">Envíanos un Mensaje</h2>
               
               {success ? (
-                <div className="bg-green-500/20 text-green-200 p-4 rounded-xl mb-6">
+                <div className="bg-primary/50 text-white p-4 rounded-xl mb-6">
                   ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {error && (
-                    <div className="bg-red-500/20 text-red-200 p-4 rounded-xl">
+                    <div className="bg-primary/50 text-white p-4 rounded-xl">
                       {error}
                     </div>
                   )}
@@ -115,7 +116,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-xl bg-primary/50 border border-accent/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                       placeholder="Ingresa tu nombre"
                     />
                   </div>
@@ -129,7 +130,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-xl bg-primary/50 border border-accent/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                       placeholder="Ingresa tu correo"
                     />
                   </div>
@@ -142,7 +143,7 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-xl bg-primary/50 border border-accent/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                       placeholder="Ingresa tu teléfono"
                     />
                   </div>
@@ -156,7 +157,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows="4"
-                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-xl bg-primary/50 border border-accent/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                       placeholder="Escribe tu mensaje"
                     ></textarea>
                   </div>
@@ -164,7 +165,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-accent text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-accent/90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? 'Enviando...' : 'Enviar Mensaje'}
                   </button>

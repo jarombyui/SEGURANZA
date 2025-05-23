@@ -75,13 +75,13 @@ const ServicesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary via-indigo-900 to-purple-900 py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-primary py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             Nuestros Servicios
           </h2>
-          <div className="w-24 h-1 bg-white/50 mx-auto mb-6 rounded-full"></div>
+          <div className="w-24 h-1 bg-accent mx-auto mb-6 rounded-full"></div>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
             Ofrecemos soluciones integrales en seguridad y capacitación para empresas y profesionales
           </p>
@@ -91,9 +91,9 @@ const ServicesPage = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 transform hover:-translate-y-1 transition-all duration-300 hover:shadow-2xl"
+              className="bg-secondary rounded-2xl p-8 shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:shadow-2xl"
             >
-              <div className="text-4xl mb-4 text-center text-yellow-400">
+              <div className="text-4xl mb-4 text-center text-accent">
                 {service.icon}
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 text-center">
@@ -104,7 +104,7 @@ const ServicesPage = () => {
               </p>
               <div className="mt-6 text-center">
                 <button
-                  className="inline-flex items-center text-yellow-400 hover:text-yellow-300 font-semibold transition-colors duration-300"
+                  className="inline-flex items-center text-accent hover:text-white font-semibold transition-colors duration-300"
                   onClick={() => handleOpenModal(index)}
                 >
                   Saber más
@@ -120,22 +120,22 @@ const ServicesPage = () => {
         {/* Modal */}
         {modalOpen && selectedService && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
-            <div className="bg-gradient-to-br from-primary via-indigo-900 to-purple-900 rounded-xl shadow-2xl p-8 max-w-lg w-full relative animate-fade-in border border-white/20">
+            <div className="bg-secondary rounded-xl shadow-2xl p-8 max-w-lg w-full relative animate-fade-in border border-accent/20">
               <button
-                className="absolute top-4 right-4 text-white hover:text-yellow-400 text-2xl font-bold"
+                className="absolute top-4 right-4 text-white hover:text-accent text-2xl font-bold"
                 onClick={handleCloseModal}
                 aria-label="Cerrar"
               >
                 &times;
               </button>
-              <h3 className="text-2xl font-bold mb-4 text-yellow-400">{selectedService.title}</h3>
+              <h3 className="text-2xl font-bold mb-4 text-accent">{selectedService.title}</h3>
               <p className="text-white/90 text-lg">{selectedService.details}</p>
             </div>
           </div>
         )}
 
         {/* Call to Action Section */}
-        <div className="mt-16 bg-white/10 backdrop-blur-lg rounded-xl shadow-lg p-8 text-white text-center border border-white/20">
+        <div className="mt-16 bg-secondary rounded-xl shadow-lg p-8 text-white text-center border border-accent/20">
           <h3 className="text-2xl font-bold mb-4">
             ¿Necesitas un servicio personalizado?
           </h3>
@@ -143,7 +143,7 @@ const ServicesPage = () => {
             Contáctanos para discutir tus necesidades específicas y encontrar la mejor solución para tu empresa
           </p>
           <button
-            className="bg-primary hover:bg-primary/80 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300"
+            className="bg-accent hover:bg-accent/90 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300"
             onClick={() => {
               const phone = '51947726382';
               const message = 'Hola, estoy interesado en los servicios de SEGURANZA para la mejora de mi negocio de SEGURANZA';

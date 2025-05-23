@@ -6,8 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#2B4B8C',  // Color azul del logo
-        secondary: '#FF0000', // Color rojo del botón de validar
+        primary: '#1E40AF',    // Deep blue
+        secondary: '#3B82F6',  // Bright blue
+        accent: '#60A5FA',     // Light blue
+        background: '#FFFFFF', // White
+        text: '#1F2937',      // Dark gray for text
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

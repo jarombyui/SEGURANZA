@@ -19,7 +19,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
@@ -28,23 +28,23 @@ const Footer = () => {
               <img
                 src="/images/NUEVO_LOGO.png"
                 alt="SEGURANZA Logo"
-                className="h-24 w-auto max-w-[240px] object-contain drop-shadow-lg rounded"
+                className="h-24 w-auto max-w-[240px] object-contain drop-shadow-lg rounded bg-white p-2"
               />
             </div>
-            <p className="text-gray-400 mb-4">
+            <p className="text-accent mb-4">
               Centro para la Seguridad Industrial, brindando capacitaciones especializadas en seguridad integral por más de 10 años.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">Enlaces Rápidos</h4>
             <ul className="space-y-2">
               {footerLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                    className="text-accent hover:text-white transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -55,13 +55,13 @@ const Footer = () => {
 
           {/* Social Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Síguenos</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">Síguenos</h4>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.path}
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-accent hover:text-white transition-colors duration-200"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <div className="border-t border-accent/20 mt-8 pt-8 text-center text-accent">
           <p>&copy; {new Date().getFullYear()} ISSECUREX. Todos los derechos reservados.</p>
         </div>
       </div>

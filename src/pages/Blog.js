@@ -37,14 +37,14 @@ const Blog = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary via-indigo-900 to-purple-900">
+    <div className="min-h-screen bg-primary">
       <div className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
               Blog de Seguridad
             </h1>
-            <div className="w-24 h-1 bg-white/50 mx-auto mb-6 rounded-full"></div>
+            <div className="w-24 h-1 bg-accent mx-auto mb-6 rounded-full"></div>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Mantente informado sobre las últimas tendencias y mejores prácticas en seguridad laboral
             </p>
@@ -54,7 +54,7 @@ const Blog = () => {
             {blogPosts.map((post) => (
               <div
                 key={post.id}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 transform hover:-translate-y-1 transition-all duration-300"
+                className="bg-secondary rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="relative h-48">
                   <img
@@ -62,9 +62,8 @@ const Blog = () => {
                     alt={post.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
-                    <span className="bg-yellow-400 text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {post.category}
                     </span>
                   </div>
@@ -78,7 +77,7 @@ const Blog = () => {
                       // Aquí iría la lógica para ver el post completo
                       console.log(`Ver post: ${post.id}`);
                     }}
-                    className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors duration-300"
+                    className="text-accent font-semibold hover:text-white transition-colors duration-300"
                   >
                     Leer más →
                   </button>
@@ -88,7 +87,7 @@ const Blog = () => {
           </div>
 
           {/* Newsletter Section */}
-          <div className="mt-20 bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+          <div className="mt-20 bg-secondary rounded-2xl p-8 shadow-xl border border-accent/20">
             <div className="text-center">
               <h2 className="text-3xl font-bold text-white mb-4">
                 Suscríbete a nuestro Newsletter
@@ -101,9 +100,9 @@ const Blog = () => {
                   <input
                     type="email"
                     placeholder="Tu correo electrónico"
-                    className="flex-1 px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
+                    className="flex-1 px-4 py-3 rounded-xl bg-primary/50 border border-accent/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                   />
-                  <button className="bg-white text-primary px-6 py-3 rounded-xl font-bold hover:bg-white/90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                  <button className="bg-accent text-white px-6 py-3 rounded-xl font-bold hover:bg-accent/90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
                     Suscribirse
                   </button>
                 </div>

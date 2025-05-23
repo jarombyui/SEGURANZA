@@ -15,7 +15,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="bg-white shadow-lg border-b border-primary/10">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -35,7 +35,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-gray-700 hover:text-primary/80 hover:bg-primary/10 px-3 py-2 text-sm font-semibold rounded transition-colors duration-200"
+                className="text-primary hover:text-secondary hover:bg-accent/10 px-3 py-2 text-sm font-semibold rounded transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -46,7 +46,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-primary/80"
+              className="text-primary hover:text-secondary"
               aria-label="Toggle menu"
             >
               <svg
@@ -78,12 +78,12 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white">
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="block text-gray-700 hover:text-primary/80 hover:bg-primary/10 px-3 py-2 text-base font-semibold rounded transition-colors duration-200"
+                  className="block text-primary hover:text-secondary hover:bg-accent/10 px-3 py-2 text-base font-semibold rounded transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}

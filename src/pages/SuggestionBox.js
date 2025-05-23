@@ -36,14 +36,14 @@ const SuggestionBox = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary via-indigo-900 to-purple-900">
+    <div className="min-h-screen bg-primary">
       <div className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
               Buzón de Sugerencias
             </h1>
-            <div className="w-24 h-1 bg-white/50 mx-auto mb-6 rounded-full"></div>
+            <div className="w-24 h-1 bg-accent mx-auto mb-6 rounded-full"></div>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Tu opinión es importante para nosotros. Ayúdanos a mejorar nuestros servicios.
             </p>
@@ -51,12 +51,12 @@ const SuggestionBox = () => {
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Information Section */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <div className="bg-secondary rounded-2xl p-8 shadow-xl border border-accent/20">
               <h2 className="text-3xl font-bold text-white mb-8">¿Por qué tus sugerencias son importantes?</h2>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="text-yellow-400 text-2xl">💡</div>
+                  <div className="text-accent text-2xl">💡</div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Mejora Continua</h3>
                     <p className="text-white/90">Tus ideas nos ayudan a mejorar nuestros servicios y procesos</p>
@@ -64,7 +64,7 @@ const SuggestionBox = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="text-yellow-400 text-2xl">🎯</div>
+                  <div className="text-accent text-2xl">🎯</div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Innovación</h3>
                     <p className="text-white/90">Tus sugerencias nos permiten innovar y adaptarnos a las necesidades del mercado</p>
@@ -72,7 +72,7 @@ const SuggestionBox = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="text-yellow-400 text-2xl">🤝</div>
+                  <div className="text-accent text-2xl">🤝</div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Compromiso</h3>
                     <p className="text-white/90">Valoramos tu participación en nuestro crecimiento y desarrollo</p>
@@ -82,7 +82,7 @@ const SuggestionBox = () => {
             </div>
 
             {/* Suggestion Form */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <div className="bg-secondary rounded-2xl p-8 shadow-xl border border-accent/20">
               <h2 className="text-3xl font-bold text-white mb-8">Envíanos tu Sugerencia</h2>
               
               {success ? (
@@ -106,7 +106,7 @@ const SuggestionBox = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-xl bg-primary/50 border border-accent/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                       placeholder="Ingresa tu nombre"
                     />
                   </div>
@@ -120,7 +120,7 @@ const SuggestionBox = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-xl bg-primary/50 border border-accent/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                       placeholder="Ingresa tu correo"
                     />
                   </div>
@@ -134,7 +134,7 @@ const SuggestionBox = () => {
                       onChange={handleChange}
                       required
                       rows="6"
-                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-xl bg-primary/50 border border-accent/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
                       placeholder="Escribe tu sugerencia aquí..."
                     ></textarea>
                   </div>
@@ -142,7 +142,7 @@ const SuggestionBox = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-gradient-to-r from-primary via-indigo-700 to-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-indigo-800 hover:to-primary transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? 'Enviando...' : 'Enviar Sugerencia'}
                   </button>

@@ -71,7 +71,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary via-indigo-900 to-purple-900 flex flex-col justify-between">
+    <div className="min-h-screen bg-primary flex flex-col justify-between">
       {/* Carrusel de imágenes institucionales */}
       <div className="relative h-[60vh] mb-8">
         <div className="absolute inset-0 overflow-hidden rounded-2xl shadow-2xl">
@@ -89,9 +89,8 @@ const Home = () => {
                 alt={carouselImages[currentIndex].caption}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-8 left-8 bg-white/10 backdrop-blur-lg rounded-xl px-6 py-4 shadow-lg">
-                <p className="text-white text-xl font-semibold drop-shadow-lg">
+              <div className="absolute bottom-8 left-8 bg-secondary rounded-xl px-6 py-4 shadow-lg">
+                <p className="text-white text-xl font-semibold">
                   {carouselImages[currentIndex].caption}
                 </p>
               </div>
@@ -101,7 +100,7 @@ const Home = () => {
         {/* Controles del carrusel */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-4 rounded-full backdrop-blur-lg transition-all duration-300 z-10"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-secondary hover:bg-accent text-white p-4 rounded-full transition-all duration-300 z-10"
         >
           <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -109,7 +108,7 @@ const Home = () => {
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-4 rounded-full backdrop-blur-lg transition-all duration-300 z-10"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-secondary hover:bg-accent text-white p-4 rounded-full transition-all duration-300 z-10"
         >
           <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -122,7 +121,7 @@ const Home = () => {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'bg-white scale-125' : 'bg-white/50'
+                index === currentIndex ? 'bg-accent scale-125' : 'bg-secondary'
               }`}
             />
           ))}
@@ -133,13 +132,13 @@ const Home = () => {
       <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-16">
         <button
           onClick={() => navigate('/cursos')}
-          className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/80 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+          className="bg-secondary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-accent transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
         >
           Ver Cursos
         </button>
         <button
           onClick={() => setShowCertInput((prev) => !prev)}
-          className="bg-red-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-red-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+          className="bg-secondary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-accent transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
         >
           Validar Certificado
         </button>
@@ -153,11 +152,11 @@ const Home = () => {
             value={certCode}
             onChange={e => setCertCode(e.target.value)}
             placeholder="Ingresa el código de certificado"
-            className="w-full max-w-md px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all duration-300 text-lg"
+            className="w-full max-w-md px-6 py-4 rounded-xl bg-secondary border border-accent/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-lg"
           />
           <button
             onClick={handleValidateCert}
-            className="bg-green-600 text-white px-8 py-3 rounded-xl font-bold text-lg hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="bg-accent text-white px-8 py-3 rounded-xl font-bold text-lg hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Validar
           </button>
@@ -167,7 +166,7 @@ const Home = () => {
       {/* Modal de validación */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
-          <div className={`rounded-2xl p-8 shadow-2xl max-w-md w-full text-center ${isValid ? 'bg-green-500' : 'bg-red-600'}`}>
+          <div className={`rounded-2xl p-8 shadow-2xl max-w-md w-full text-center ${isValid ? 'bg-secondary' : 'bg-primary'}`}>
             <h2 className="text-2xl font-bold text-white mb-4">
               {isValid ? '¡Certificado Válido!' : 'Certificado No Válido'}
             </h2>
@@ -178,7 +177,7 @@ const Home = () => {
             </p>
             <button
               onClick={() => setShowModal(false)}
-              className="bg-white text-primary font-bold px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+              className="bg-accent text-white font-bold px-6 py-2 rounded-lg hover:bg-accent/90 transition-colors duration-300"
             >
               Cerrar
             </button>
@@ -190,19 +189,19 @@ const Home = () => {
       <div className="flex flex-col items-center gap-8 pb-24 px-4">
         <button
           onClick={() => navigate('/contacto')}
-          className="w-full max-w-md bg-primary text-white text-2xl font-extrabold py-6 rounded-2xl shadow-xl hover:bg-primary/80 hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          className="w-full max-w-md bg-secondary text-white text-2xl font-extrabold py-6 rounded-2xl shadow-xl hover:bg-accent hover:scale-105 hover:shadow-2xl transition-all duration-300"
         >
           ¡Solicita una Asesoría Gratuita y eleva la seguridad de tu empresa!
         </button>
         <button
           onClick={() => navigate('/servicios')}
-          className="w-full max-w-md bg-indigo-800 text-white text-2xl font-extrabold py-6 rounded-2xl shadow-xl hover:bg-indigo-900 hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          className="w-full max-w-md bg-secondary text-white text-2xl font-extrabold py-6 rounded-2xl shadow-xl hover:bg-accent hover:scale-105 hover:shadow-2xl transition-all duration-300"
         >
           Descubre todos nuestros servicios de seguridad laboral
         </button>
         <button
           onClick={() => navigate('/contacto')}
-          className="w-full max-w-md bg-blue-700 text-white text-2xl font-extrabold py-6 rounded-2xl shadow-xl hover:bg-blue-800 hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          className="w-full max-w-md bg-accent text-white text-2xl font-extrabold py-6 rounded-2xl shadow-xl hover:bg-secondary hover:scale-105 hover:shadow-2xl transition-all duration-300"
         >
           ¡Habla con un experto ahora y protege a tu equipo!
         </button>

@@ -40,14 +40,14 @@ const courses = [
 
 const Courses = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary via-indigo-900 to-purple-900">
+    <div className="min-h-screen bg-primary">
       <div className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
               Cursos de Trabajos de Alto Riesgo
             </h1>
-            <div className="w-24 h-1 bg-white/50 mx-auto mb-6 rounded-full"></div>
+            <div className="w-24 h-1 bg-accent mx-auto mb-6 rounded-full"></div>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Formación especializada para profesionales que buscan la excelencia en seguridad laboral
             </p>
@@ -57,7 +57,7 @@ const Courses = () => {
             {courses.map((course) => (
               <div
                 key={course.id}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 transform hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                className="bg-secondary rounded-2xl overflow-hidden shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex flex-col"
               >
                 <div className="relative h-48">
                   <img
@@ -65,13 +65,14 @@ const Courses = () => {
                     alt={course.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <h3 className="text-2xl font-bold text-white text-center px-4 bg-primary/80 py-2 rounded-lg">{course.title}</h3>
+                  </div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-2xl font-bold text-white mb-3">{course.title}</h3>
                   <p className="text-white/90 mb-4 flex-1">{course.description}</p>
-                  <div className="bg-white/10 rounded-xl p-4 mb-4">
-                    <p className="text-yellow-400 font-semibold">{course.impact}</p>
+                  <div className="bg-primary/50 rounded-xl p-4 mb-4">
+                    <p className="text-accent font-semibold">{course.impact}</p>
                   </div>
                   <button
                     onClick={() => {
@@ -79,7 +80,7 @@ const Courses = () => {
                       const message = `Hola, me interesa el curso de ${course.title}`;
                       window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
                     }}
-                    className="bg-white text-primary px-6 py-3 rounded-xl font-bold text-lg hover:bg-white/90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl mt-auto"
+                    className="bg-accent text-white px-6 py-3 rounded-xl font-bold text-lg hover:bg-accent/90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl mt-auto"
                   >
                     ¡Inscríbete Ahora!
                   </button>
