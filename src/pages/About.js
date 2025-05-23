@@ -1,8 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary via-secondary to-accent">
+      <Helmet>
+        <title>Quiénes Somos - SEGURANZA</title>
+        <meta name="description" content="Conoce más sobre SEGURANZA, nuestra misión, visión y valores como centro líder en seguridad industrial."/>
+      </Helmet>
+
       {/* Hero Section */}
       <div className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

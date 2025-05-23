@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 const serviceDetails = [
   {
@@ -76,6 +77,11 @@ const ServicesPage = () => {
 
   return (
     <div className="min-h-screen bg-primary py-20 px-4 sm:px-6 lg:px-8">
+      <Helmet>
+        <title>Servicios de Seguridad Integral - SEGURANZA</title>
+        <meta name="description" content="Descubre nuestros servicios de seguridad y salud en el trabajo, consultoría, auditorías y capacitación personalizada para empresas."/>
+      </Helmet>
+
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">

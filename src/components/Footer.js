@@ -28,7 +28,7 @@ const Footer = () => {
               <img
                 src="/images/NUEVO_LOGO.png"
                 alt="SEGURANZA Logo"
-                className="h-24 w-auto max-w-[240px] object-contain drop-shadow-lg rounded bg-white p-2"
+                className="h-24 w-auto max-w-[240px] object-contain drop-shadow-lg"
               />
             </div>
             <p className="text-accent mb-4">

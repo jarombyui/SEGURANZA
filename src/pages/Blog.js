@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const Blog = () => {
   const blogPosts = [
@@ -38,6 +39,11 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-primary">
+      <Helmet>
+        <title>Blog de Seguridad Industrial - SEGURANZA</title>
+        <meta name="description" content="Mantente informado con los últimos artículos y noticias sobre seguridad laboral, prevención de riesgos y mejores prácticas en el blog de SEGURANZA."/>
+      </Helmet>
+
       <div className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">

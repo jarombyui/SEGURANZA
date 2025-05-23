@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -38,6 +39,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-primary">
+      <Helmet>
+        <title>Contáctanos - SEGURANZA</title>
+        <meta name="description" content="Ponte en contacto con SEGURANZA para consultar sobre nuestros cursos, servicios o cualquier necesidad de seguridad industrial."/>
+      </Helmet>
+
       <div className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -60,7 +66,7 @@ const Contact = () => {
                   <div className="text-accent text-2xl">📍</div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Dirección</h3>
-                    <p className="text-white/90">Urb. Virgen del Carmen, Calle Gardenias N° 13, Ate - Lima.</p>
+                    <p className="text-white/90">Urb. Santa Patricia, La Molina, Lima, Lima</p>
                   </div>
                 </div>
 

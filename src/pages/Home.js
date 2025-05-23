@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet } from 'react-helmet';
 
 const carouselImages = [
   {
@@ -72,6 +73,11 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-primary flex flex-col justify-between">
+      <Helmet>
+        <title>SEGURANZA - Capacitación y Certificación en Seguridad Industrial</title>
+        <meta name="description" content="Centro líder en capacitación y certificación en seguridad industrial en Perú. Ofrecemos cursos especializados, consultoría y servicios integrales para empresas."/>
+      </Helmet>
+
       {/* Carrusel de imágenes institucionales */}
       <div className="relative h-[60vh] mb-8">
         <div className="absolute inset-0 overflow-hidden rounded-2xl shadow-2xl">

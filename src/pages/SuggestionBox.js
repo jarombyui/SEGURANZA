@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 const SuggestionBox = () => {
   const [formData, setFormData] = useState({
@@ -37,6 +38,11 @@ const SuggestionBox = () => {
 
   return (
     <div className="min-h-screen bg-primary">
+      <Helmet>
+        <title>Buzón de Sugerencias - SEGURANZA</title>
+        <meta name="description" content="Envíanos tus sugerencias y comentarios para ayudarnos a mejorar nuestros servicios de capacitación y seguridad industrial."/>
+      </Helmet>
+
       <div className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">

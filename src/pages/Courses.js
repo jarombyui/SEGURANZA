@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const courses = [
   {
@@ -41,6 +42,11 @@ const courses = [
 const Courses = () => {
   return (
     <div className="min-h-screen bg-primary">
+      <Helmet>
+        <title>Cursos de Seguridad Industrial - SEGURANZA</title>
+        <meta name="description" content="Explora nuestros cursos especializados en trabajos de alto riesgo: altura, espacios confinados, caliente, riesgo eléctrico y más. Certifícate con SEGURANZA."/>
+      </Helmet>
+
       <div className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
